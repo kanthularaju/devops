@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Scene</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #87CEEB;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .mountains {
+            position: relative;
+            height: 250px;
+            background: #2E8B57;
+            clip-path: polygon(0% 100%, 15% 60%, 30% 70%, 50% 50%, 70% 75%, 90% 60%, 100% 100%);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .river {
+            width: 100%;
+            height: 100px;
+            background: #1E90FF;
+            margin-top: -10px;
+            border-radius: 0 0 50% 50%;
+        }
+        .sun {
+            position: absolute;
+            top: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #FFD700 30%, #FF6347 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 223, 0, 0.5);
+        }
+        .flock {
+            position: absolute;
+            bottom: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            color: white;
+        }
+        .flock span {
+            padding: 0 5px;
+            animation: moveSheep 6s infinite linear;
+        }
+        @keyframes moveSheep {
+            0% { left: -50px; }
+            100% { left: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mountains">
+        <div class="sun"></div>
+    </div>
+    
+    <div class="river"></div>
+
+    <div class="flock">
+        <span>🐑</span>
+        <span>🐑</span>
+        <span>🐑</span>
+        <span>🐑</span>
+        <span>🐑</span>
+    </div>
+
+</body>
+</html>
